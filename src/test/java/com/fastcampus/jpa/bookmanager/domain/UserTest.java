@@ -20,7 +20,7 @@ class UserTest {
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
 
-        User user1 = new User("martin", "martin@naver.com", LocalDateTime.now(), LocalDateTime.now());
+        User user1 = new User(null, "martin", "martin@naver.com", LocalDateTime.now(), LocalDateTime.now());
         User user2 = new User("martin", "martin@naver.com");
 
         User user3 = User.builder()
@@ -29,7 +29,7 @@ class UserTest {
                 .build();
 
         System.out.println(">>> " + user.toString());
-        System.out.println(">>> " + user1.toString());
+        //System.out.println(">>> " + user1.toString());
         System.out.println(">>> " + user2.toString());
         System.out.println(">>> " + user3.toString());
 
