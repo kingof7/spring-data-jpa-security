@@ -77,14 +77,20 @@ class UserRepositoryTest {
 //        Example<User> example = Example.of(new User("ma", "fastcampus.com"), matcher); // name: "ma"가 무시됨
 
         // 포함
-        User user = new User();
-        user.setEmail("slow");
+//        User user = new User();
+//        user.setEmail("slow");
+//
+//        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("email", contains());
+//        Example<User> example = Example.of(user, matcher);
+//        userRepository.findAll(example).forEach(System.out::println);
 
-        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("email", contains());
-        Example<User> example = Example.of(user, matcher);
-        userRepository.findAll(example).forEach(System.out::println);
+        userRepository.save(new User("david", "david@fastcampus.com"));
 
+        User user = userRepository.findById(1L).orElseThrow(RuntimeException::new);
+        user.setEmail("martin-updated@fastcampus.com");
 
+        userRepository.save(user);
 
+        userRepository.findAll().forEach(System.out::println);
     }
 }
