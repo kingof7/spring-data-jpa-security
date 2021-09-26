@@ -30,8 +30,8 @@ public class User {
     @NonNull //필수 필드
     private String email;
 
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private LocalDateTime created_at;
+    private LocalDateTime updated_at;
 
     @Override
     public boolean equals(Object o) {

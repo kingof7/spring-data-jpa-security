@@ -17,8 +17,8 @@ class UserTest {
         User user = new User();
         user.setEmail("martin@fastcampus.com");
         user.setName("margin");
-        user.setCreatedAt(LocalDateTime.now());
-        user.setUpdatedAt(LocalDateTime.now());
+        user.setCreated_at(LocalDateTime.now());
+        user.setUpdated_at(LocalDateTime.now());
 
         User user1 = new User(null, "martin", "martin@naver.com", LocalDateTime.now(), LocalDateTime.now());
         User user2 = new User("martin", "martin@naver.com");
