@@ -1,11 +1,8 @@
 package com.fastcampus.jpa.bookmanager.domain;
 
-import jdk.vm.ci.meta.Local;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author jhlee
